@@ -1,8 +1,8 @@
 
 /*
  * Brady Lange
- * Class: CSIS 162 Programming II
- * Program 5
+ * Class: CSIS 162 Programming
+ * Program #5
  * Due Date: May 9th, 2017
  * This class has bird specific attributes
  * It consists of these classes: Person, partTime, pets, Cat, bird, graduate, undergraduate, and mainClass.
@@ -24,8 +24,8 @@ public class bird extends pets { //is-a pet
 	
 	public bird(String fCol, int bLen)
 	{
-	featherColor = fCol;
-	beakLength = bLen;
+		featherColor = fCol;
+		beakLength = bLen;
 	}
 	
 	//alternate constructor
