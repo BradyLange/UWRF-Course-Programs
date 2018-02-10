@@ -1,6 +1,7 @@
 /*
  * Brady Lange
- * CSIS 161
+ * CSIS 161 Programming
+ * Program #1
  * 9/24/16
  * This program displays information about River Falls, WI like it's location and population size.
  */
