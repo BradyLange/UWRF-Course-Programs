@@ -1,7 +1,8 @@
-//Main class - driver class
 /*
+ * Main class - driver class
  * Brady Lange
- * Program 1
+ * CSIS 162 Programming
+ * Program #1
  * Due Date: 02/13/17
  * Program that calculates the area, perimeter, and volume of various different shapes using methods.
  */
