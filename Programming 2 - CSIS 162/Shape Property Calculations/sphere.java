@@ -1,5 +1,12 @@
+/*
+ * Brady Lange
+ * CSIS 162 Programming
+ * Program #1 
+ * Class holds the area, volume, circumference, and radius of a sphere.
+ */
 
 public class sphere { //start of sphere class
+	
 	public double area, volume, circumference, radius;
 	
 	public sphere() //default constructor
