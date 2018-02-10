@@ -1,11 +1,12 @@
 /*
  * Name: Brady Lange
- * Class: CSIS 162 Prgramming II
- * Program 4
+ * Class: CSIS 162 Prgramming
+ * Program #4
  * Due Date: April 18th, 2017
  * Writes a java program that uses a two-dimensional array to store the highest and lowest temperatures for each month of the year. 
  * It consists of two classes: temperature and driver	 
  */
+
 import java.util.*; //importing already coded code
 import java.io.*;
 
@@ -16,7 +17,7 @@ public class temperature { //start of temperature class
 
 	//class variables
 	private static Scanner inFile; //no setter/getter
-		//averages
+	//averages
 	private static double avgLo; //no setter/getter
 	private static double averageLow; //no setter/getter
 	private static double averageHigh; //no setter/getter
@@ -28,14 +29,14 @@ public class temperature { //start of temperature class
 		//creating stream to text file	
 		inFile = new Scanner(new FileReader("inFile.txt"));
 			
-			//For loop
-			for(int row = 0; row < temperatures.length; row ++)
+		//For loop
+		for(int row = 0; row < temperatures.length; row ++)
+		{
+			for(int column = 0; column < temperatures[row].length; column++)
 			{
-				for(int column = 0; column < temperatures[row].length; column++)
-				{
 				temperatures[row][column] = inFile.nextInt(); //read the inFile
-				}
-			} //end loop
+			}
+		} //end loop
 			
 		//closing inFile
 		inFile.close();
@@ -57,12 +58,12 @@ public class temperature { //start of temperature class
 	//average high temperature for the year method
 	public static double avgHighTemp()
 	{
-	int hiRo = 0;
-	for (int column = 0; column < temperatures[hiRo].length; column++)
-	averageHigh += temperatures[hiRo][column];
-	avgHi = averageHigh / 12.0;
-	inFile.close(); //closes the file
-	return avgHi;
+		int hiRo = 0;
+		for (int column = 0; column < temperatures[hiRo].length; column++)
+		averageHigh += temperatures[hiRo][column];
+		avgHi = averageHigh / 12.0;
+		inFile.close(); //closes the file
+		return avgHi;
 	} //end of avgHighTemp method
 	
 	//average low temperature for the year method
@@ -71,8 +72,8 @@ public class temperature { //start of temperature class
 		int lowestRow = 1;
 		for(int column = 0; column < temperatures[lowestRow].length; column++)
 			averageLow += temperatures[lowestRow][column];	
-			avgLo = averageLow / 12;	
-				return avgLo;
+		avgLo = averageLow / 12;	
+		return avgLo;
 	} //end of avgLowTemp method
 	
 	//method that calculates and returns the index of the highest temperatures of the year
@@ -81,15 +82,16 @@ public class temperature { //start of temperature class
 		double hi = temperatures[0][0];
 		int track = 0;
 		
-		for(int row = 0; row < temperatures.length; row++){
+		for(int row = 0; row < temperatures.length; row++)
+		{
 			for(int column = 0; column < temperatures[row].length; column++)
-			if(temperatures[row][column] > hi) 
-			{
-		hi = temperatures[row][column];
-		track = column;
-			}
+				if(temperatures[row][column] > hi) 
+				{
+					hi = temperatures[row][column];
+					track = column;
+				}
 		}
-			return hi;
+		return hi;
 	}//end of indexHighTemp method
 
 	//method that calculates and returns the index of the lowest temperatures of the year
@@ -103,8 +105,8 @@ public class temperature { //start of temperature class
 			for(int column = 0; column < temperatures[row].length; column++)
 				if(temperatures[row][column] < lo)
 				{
-			lo = temperatures[row][column];
-			track = row;
+					lo = temperatures[row][column];
+					track = row;
 				}
 		}
 		return lo;
@@ -114,10 +116,10 @@ public class temperature { //start of temperature class
 	public void setTemps(double tempTemps [] [])
 	{
 		for(int row = 0; row < temperatures.length; row ++)
-			{
+		{
 			for(int column = 0; column < tempTemps[row].length; column++)
 				temperatures[row][column] = tempTemps[row][column];
-			}
+		}
 	} //end of setTemps method
 	
 	//getter
@@ -135,7 +137,7 @@ public class temperature { //start of temperature class
 	{
 		for(int row = 0; row < obj.temperatures.length; row++)
 			for(int column = 0; column < temperatures[row].length; column++)
-			temperatures[row][column] = obj.temperatures[row][column];
+				temperatures[row][column] = obj.temperatures[row][column];
 	}
 	
 	//makeCopy method
@@ -149,12 +151,12 @@ public class temperature { //start of temperature class
 	//getCopy method
 	public temperature getCopy() throws FileNotFoundException
 	{
-	temperature tempObj = new temperature();
+		temperature tempObj = new temperature();
 
 		for(int row = 0; row < tempObj.temperatures.length; row++)
 			for(int column = 0; column < temperatures[row].length; column++)
-			tempObj.temperatures[row][column] = temperatures[row][column]; 
-	return tempObj;
+				tempObj.temperatures[row][column] = temperatures[row][column]; 
+		return tempObj;
 	}
 	
 	//two dimensional array copy constructor
@@ -173,7 +175,7 @@ public class temperature { //start of temperature class
 		double [][] tempArray = new double[temperatures.length][];
 		for(int row = 0; row < tempArray.length; row++)
 			for(int column = 0; column < temperatures[row].length; column++)
-			tempArray[row][column] = obj.temperatures[row][column];
+				tempArray[row][column] = obj.temperatures[row][column];
 		return tempArray == obj.temperatures;
 	}
 	
@@ -181,14 +183,14 @@ public class temperature { //start of temperature class
 	public boolean findTheSame(double [][] one, double [][] two)
 	{
 		if(one.length != two.length)
-	
-		return false;
-	else
-		for(int row = 0; row < one.length; row++)
-			for(int column = 0; column < temperatures[row].length; column++)
-			if(one[row][column] != two[row][column])
-				return false;
-	return true;
+			return false;
+		
+		else
+			for(int row = 0; row < one.length; row++)
+				for(int column = 0; column < temperatures[row].length; column++)
+					if(one[row][column] != two[row][column])
+						return false;
+		return true;
 	}
 
 	//toString method
@@ -201,11 +203,11 @@ public class temperature { //start of temperature class
 		{
 			for(int column = 0; column < temperatures[row].length; column++)
 			{
-		tempArray += temperatures[row][column] + " ";
+				tempArray += temperatures[row][column] + " ";
 			}
-		data = ("The highest temperatures then lowest temperatures for each month are: " + tempArray);
+			data = ("The highest temperatures then lowest temperatures for each month are: " + tempArray);
 		}
-				return data;
+		return data;
 	} //end of toString method
 
 } //end of temperature class
