@@ -1,3 +1,10 @@
+/*
+ * Brady Lange
+ * CSIS 162 Programming
+ * Program #3
+ * Class executes and iterates through the gradebook for students grades using an array.
+ */
+
 import java.io.*; //importing already coded code
 
 public class driver { //start of driver class
