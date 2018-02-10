@@ -1,5 +1,12 @@
+/*
+ * Brady Lange
+ * CSIS 162 Programming 
+ * Program #1
+ * Class that stores the area, volume, circumference, radius, and height of a cylinder.
+ */
 
 public class cylinder { //start of cylinder class
+	
 	public double area, volume, circumference, radius, height;
 
 	public cylinder() //default constructor
