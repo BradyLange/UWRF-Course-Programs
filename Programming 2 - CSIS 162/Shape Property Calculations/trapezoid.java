@@ -1,5 +1,12 @@
+/*
+ * Brady Lange
+ * CSIS 162 Programming
+ * Program #1 
+ * Class holds base one, base two, height, the left side, the right side, area, and perimeter of a trapezoid.
+ */
 
 public class trapezoid { //start of trapezoid class
+	
 	public double base1, base2, height, leftSide, rightSide, area, perimeter;
 
 	public trapezoid() //default constructor
