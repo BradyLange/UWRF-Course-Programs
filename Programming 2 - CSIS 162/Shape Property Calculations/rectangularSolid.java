@@ -1,3 +1,9 @@
+/*
+ * Brady Lange
+ * CSIS 162 Programming
+ * Program #1
+ * Class that holds the area, volume, perimeter, length, width, and height of a rectangular solid.
+ */
 
 public class rectangularSolid {
 
