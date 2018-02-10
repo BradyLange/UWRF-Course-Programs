@@ -1,5 +1,12 @@
+/*
+ * Brady Lange
+ * CSIS 162 Programming
+ * Program #1
+ * Class holds the area, volume, perimeter, base, height, depth, side two, and side three of a triangular prism.
+ */
 
 public class triangularPrism { //start of triangularPrism class
+	
 	public double area, volume, perimeter, base, height, depth, side2, side3;
 	
 	public triangularPrism() //default constructor
