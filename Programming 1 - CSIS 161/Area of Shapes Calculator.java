@@ -7,13 +7,13 @@ public class myMathProgram { //start of myMathProgram class
 	 * CSIS 161 Programming
 	 * Section: 02
 	 * Meets: M,W, & F at 1:00 PM to 1:50 PM.
-   * This program calculates the area of math shapes such as a triangle, circle, square, and rectangle.
+   	 * This program calculates the area of math shapes such as a triangle, circle, square, and rectangle.
 	 */
 	
      public static void main(String[] args) { //start of main method
         Scanner console = new Scanner(System.in); //inputs
 
-        //declaring variables
+        //Declaring Variables
         //(1) Area of triangle variables
         double base; //base of triangle
         double height; //height of triangle
@@ -37,45 +37,45 @@ public class myMathProgram { //start of myMathProgram class
         int rectResult; //area of the rectangle
 
 
-        //inputting base of triangle (1)
+        //Inputting base of triangle (1)
         System.out.print("What is the base of the triangle?");
         base=console.nextDouble();
-        //inputting height of triangle
+        //Inputting height of triangle
         System.out.print("What is the height of the triangle?");
         height=console.nextDouble();
-        //calculation
+        //Calculation
         triResult = baseHalf * base * height;
         triFormatted = String.format("%.2f", triResult); //2 decimal places
         System.out.println("The area of the triangle with the base of " + base +" and the height of " + height +" is " + triFormatted + ".\n");
 
-        //inputting the radius of the circle (2)
+        //Inputting the radius of the circle (2)
         System.out.print("What is the radius of the circle?");
         radius=console.nextDouble();
-        //calculation
+        //Calculation
         cirResult = radius * radius * Math.PI; //using Math.PI in place of putting 3.14
         pi = String.format("%.2f", Math.PI); //using only 2 decimal places for PI
         cirFormatted = String.format("%.2f", cirResult); //2 decimal places 
         System.out.println("The area of the circle with the radius of " + radius + " and PI of " + pi + " is " + cirFormatted + ".\n");
 
-        //inputting the side of the square (3)
+        //Inputting the side of the square (3)
         System.out.print("What is the length of the side of the square? (no fractions)");
         side=console.nextInt();
-        //calculation
+        //Calculation
         squResult = side * side;
         System.out.println("The area of the square with the sides of " + side + " in length is " + squResult + ".\n");
 
-        //inputting the width of the rectangle (4)
+        //Inputting the width of the rectangle (4)
         System.out.print("What is the width of the rectangle? (no fractions)");
         width=console.nextInt();
-        //inputting the length of the rectangle
+        //Inputting the length of the rectangle
         System.out.print("What is the length of the rectangle? (no fractions)");
         length=console.nextInt();
-        //calculation
+        //Calculation
         rectResult = width * length;
         System.out.println("The area of the rectangle with the width of " + width + " and length of " + length + " is " + rectResult + ".");
 
         console.close(); //closing the console to avoid possible error
 
-	} //end of main method
+     } //end of main method
 
 } //end of myMathProgram class
