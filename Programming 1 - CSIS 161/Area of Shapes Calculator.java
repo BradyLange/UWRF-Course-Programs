@@ -5,6 +5,7 @@ public class myMathProgram { //start of myMathProgram class
 	/*
 	 * Brady Lange
 	 * CSIS 161 Programming
+	 * Program #2
 	 * Section: 02
 	 * Meets: M,W, & F at 1:00 PM to 1:50 PM.
    	 * This program calculates the area of math shapes such as a triangle, circle, square, and rectangle.
