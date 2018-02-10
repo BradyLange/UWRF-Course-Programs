@@ -1,5 +1,12 @@
+/*
+ * Brady Lange
+ * CSIS 162 Programming
+ * Progam #1
+ * Class that holds the area, circumference, volume, height, radius, and side of a cone.
+ */
 
 public class cone { //start of cone class
+	
 	public double area, circumference, volume, height, radius, side;
 	
 	public cone() //default constructor
