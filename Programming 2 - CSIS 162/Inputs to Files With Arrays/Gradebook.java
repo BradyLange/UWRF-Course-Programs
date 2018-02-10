@@ -1,7 +1,7 @@
 /*
  * Name: Brady Lange
- * Class: CSIS 162 Programming II
- * Program 3
+ * Class: CSIS 162 Programming
+ * Program #3
  * Due Date: April 7th, 2017
  * This Java program works with arrays and objects by reading data from an inFile and outputting them formatted in an outFile.
  * It consists of two classes: gradebook and driver	 
@@ -9,6 +9,7 @@
 
 import java.util.*; //importing already coded code
 import java.io.*;
+
 public class gradebook { //start of gradebook class
 	
 	private String firstName, lastName;
@@ -41,7 +42,7 @@ public class gradebook { //start of gradebook class
 			{
 			scores[index] = inFile.nextDouble();
 			sum += scores[index];
-				averageScores = sum / scores.length;
+			averageScores = sum / scores.length;
 			}
 		 //adding the average scores of the students
 		avg += averageScores;
@@ -163,20 +164,18 @@ public class gradebook { //start of gradebook class
 		for(int index = 0; index < array.length; index++)
 			tempArray[index] = array[index];
 		return tempArray;
-		
 	}
 	
 	//finding equal arrays
 	public boolean findTheSame(int [] one, int [] two)
 	{
 		if(one.length != two.length)
-	
-		return false;
-	else
-		for(int index = 0; index < one.length; index++)
-			if(one[index] != two[index])
-				return false;
-	return true;
+			return false;
+		else
+			for(int index = 0; index < one.length; index++)
+				if(one[index] != two[index])
+					return false;
+		return true;
 	}
 	
 	//toString statement
@@ -189,7 +188,7 @@ public class gradebook { //start of gradebook class
 		String lName = String.format("%1s", lastName);
 		String avgForm = String.format("%.2f", averageScores); //formatting to two decimal places
 		String data = fName + "\t\t" + lName + "\t" + tempArray + avgForm + "\t " + grade; 
-				return data;
+		return data;
 	}
 	
 } //end of gradebook class
