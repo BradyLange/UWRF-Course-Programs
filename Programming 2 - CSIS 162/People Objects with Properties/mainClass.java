@@ -1,28 +1,29 @@
 
 /*
  * Brady Lange
- * Class: CSIS 162 Programming II
- * Program 5
+ * CSIS 162 Programming
+ * Program #5
  * Due Date: May 9th, 2017
  * This class creates people objects 
  * It consists of these classes: Person, partTime, pets, Cat, bird, graduate, undergraduate, and mainClass.
  */
 
 public class mainClass {
-	   public static void main(String[] arg)
-	   {
+	   
+	public static void main(String[] arg)
+	{
 		   
-		  // partTime empOne= new partTime("Jack", "Smith", 
-				   //"434-98-9832", 12.2, 43, "Willow");
-		  //  System.out.println(empOne);
-		   // empOne.catRunning();
+		  //partTime empOne= new partTime("Jack", "Smith", 
+		  //"434-98-9832", 12.2, 43, "Willow");
+		  //System.out.println(empOne);
+		  //empOne.catRunning();
 		    
-		    //Cat strayCat = new Cat("Morris");
-		   // partTime empTwo= new partTime();
-		   // System.out.println(empTwo);
+		  //Cat strayCat = new Cat("Morris");
+		  //partTime empTwo= new partTime();
+		  //System.out.println(empTwo);
 		    
-		   // empTwo.adoptAcat(strayCat);
-		   // System.out.println(empTwo);
+		  //empTwo.adoptAcat(strayCat);
+		  //System.out.println(empTwo);
 		   
 		   //MARY ANDERSON OBJECT
 		    bird newBird = new bird("Red", 2, "Crow", "Beaky", "January 12, 1999"); //instantiate the bird object with values //has a bird
@@ -56,6 +57,6 @@ public class mainClass {
 		    String catsBreed = newCat3.getBreed(); //getting Mary's cat's breed
 		    System.out.println("Mary's cat's breed is: " + catsBreed); //printing it out
 		    
-	   }//end of main
+	}//end of main
 	      
-	}//end of class
+}//end of class
