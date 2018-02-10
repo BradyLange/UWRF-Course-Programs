@@ -1,7 +1,7 @@
 /*
  * Brady Lange
- * Class: CSIS 162 Prgramming II
- * Program 4
+ * Class: CSIS 162 Prgramming
+ * Program #4
  * Due Date: April 18th, 2017
  * This class of code creates a two-dimensional array of temperatures of each month of the year and then outputs the data to a text file.
  * It consists of two classes: temperature and driver	
@@ -32,8 +32,8 @@ public class driver { //start of driver class
 		 
 		//Coding information for the outFile for the average low temp for the year
 		double averageLowTemp = temperature.avgLowTemp();
-			String monthLow = String.format("%.2f" , averageLowTemp);
-			outFile.println("\nThe average low temperature for the year of all the months is: " + monthLow);
+		String monthLow = String.format("%.2f" , averageLowTemp);
+		outFile.println("\nThe average low temperature for the year of all the months is: " + monthLow);
 		 
 		//Coding information for the outFile for the average high temp for the year
 		double averageHighTemp;
@@ -41,7 +41,7 @@ public class driver { //start of driver class
 		String monthHigh = String.format("%.2f", averageHighTemp);
 		outFile.println("\nThe average high temperature for the year of all the months is: " + monthHigh);
 		
-	//closing the outFile
+		//closing the outFile
 		outFile.close();
 		
 		int [][] array = {{2,3,5}, {3,4,1}};
