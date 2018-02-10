@@ -1,5 +1,12 @@
+/*
+ * Brady Lange
+ * CSIS 162 Programming
+ * Program #1
+ * Class that holds the radius, diameter, area, and circumference of a circle.
+ */
 
 public class circle { //start of circle class
+	
 	public double radius, diameter, area, circumference;
 	
 	public circle() //default constructor
