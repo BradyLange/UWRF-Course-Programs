@@ -1,8 +1,8 @@
 
 /*
  * Brady Lange
- * Class: CSIS 162 Programming II
- * Program 5
+ * Class: CSIS 162 Programming
+ * Program #5
  * Due Date: May 9th, 2017
  * This class is the parent class to the animal classes
  * It consists of these classes: Person, partTime, pets, Cat, bird, graduate, undergraduate, and mainClass.
@@ -71,19 +71,18 @@ public class pets {
 	}
 	
 	//makeCopy method
-    public void makeCopy(pets obj){
-    	this.breed = obj.breed;
-    	this.petName = obj.petName;
-    	this.dateOfBirth = obj.dateOfBirth;
-    }
+    	public void makeCopy(pets obj)
+	{
+    		this.breed = obj.breed;
+    		this.petName = obj.petName;
+    		this.dateOfBirth = obj.dateOfBirth;
+    	}
 	
 	//toString method
 	public String toString()
 	{
 		String data = "Breed: " + breed + "\n" + "Pet Name: " + petName + "\n" + "Date of Birth: " + dateOfBirth + "\n";
 		return data;
-	}
-	
-	
+	}	
 	
 } //end of pets class
