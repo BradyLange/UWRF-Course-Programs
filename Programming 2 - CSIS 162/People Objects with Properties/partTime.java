@@ -13,13 +13,13 @@
 
 public class partTime extends Person  //is-a
 {
-   private double payRate;     //store the pay rate
-   private double pay;
-   private double hoursWorked; //store the hours worked
-   private Cat myCat; //has-a
-   private bird myBird; //has-a
-   private dog myDog; //has-a
-  
+	   private double payRate;     //store the pay rate
+	   private double pay;
+	   private double hoursWorked; //store the hours worked
+	   private Cat myCat; //has-a
+	   private bird myBird; //has-a
+	   private dog myDog; //has-a
+
 	   //this is HAS-A relationship; Also called composition ; a person HAS-A a Cat
 	   //notice it is not is-a relationships; saying a Cat IS-A Person does not make sense.
 	   //adopting a cat
