@@ -1,8 +1,8 @@
 
 /*
  * Brady Lange
- * Class: CSIS 162 Programming II
- * Program 5
+ * Class: CSIS 162 Programming
+ * Program #5
  * Due Date: May 9th, 2017
  * This class has undergraduate specific attributes
  * It consists of these classes: Person, partTime, pets, Cat, bird, graduate, undergraduate, and mainClass.
@@ -74,9 +74,5 @@ public class undergraduate extends partTime { //considered a part time employee 
 		return data;
 	}
 	
-	
-	
-	
-	
-	
+
 } //end of undergraduate class
