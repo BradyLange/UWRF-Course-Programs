@@ -1,3 +1,8 @@
+# Brady Lange
+# Worksheet 3
+# 2/17/18
+# R Functions - Objects
+
 # 1.)
 # Creating the vector my_names
 my_names <- c('l','a','n','g','e','b','r','a','d','y')
