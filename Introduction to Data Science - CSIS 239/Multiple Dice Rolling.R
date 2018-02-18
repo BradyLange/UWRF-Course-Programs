@@ -8,9 +8,9 @@
 multi_roll <- function(die1 = 1:20, die2 = 1:9)
 {
   # Rolling die one three times
-  die1_rolls <- c(sample(die1, size = 1, replace = TRUE), sample(die1, size = 1, replace = TRUE), sample(die1, size = 1, replace = TRUE))
+  die1_rolls <- sample(die1, size = 3, replace = TRUE)
   # Rolling die two three times
-  die2_rolls <- c(sample(die2, size = 1, replace = TRUE), sample(die2, size = 1, replace = TRUE), sample(die2, size = 1, replace = TRUE))
+  die2_rolls <- sample(die2, size = 3, replace = TRUE)
   # Combining die one and die twos results into a vector
   die_comb <- c(die1_rolls, die2_rolls)
   # Printing out the new vector
@@ -21,3 +21,4 @@ multi_roll <- function(die1 = 1:20, die2 = 1:9)
 multi_roll()
 # Testing user values passed to the function
 multi_roll(1:6, 1:2)
+
