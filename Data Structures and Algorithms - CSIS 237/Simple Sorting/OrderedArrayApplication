@@ -1,0 +1,78 @@
+package problem_2;
+
+/*
+ * Problem 2
+ * OrderedArrayApp class tests algorithms for the OrderedArray class.
+ * Brady Lange
+ * Date: 2/3/18
+ */
+
+public class OrderedArrayApp {
+	   
+	public static void main(String[] args)
+	      {
+	      int maxSize = 100;             // array size
+	      OrderedArray arr;                  // reference to array
+	      arr = new OrderedArray(maxSize);   // create the array
+
+	      arr.insert(77);                // insert 10 items
+	      arr.insert(99);
+	      arr.insert(44);
+	      arr.insert(55);
+	      arr.insert(22);
+	      arr.insert(88);
+	      arr.insert(11);
+	      arr.insert(00);
+	      arr.insert(66);
+	      arr.insert(33);
+
+	      int searchKey = 55;            // search for item
+	      if( arr.find(searchKey) != arr.size() )
+	         System.out.println("Found " + searchKey);
+	      else
+	         System.out.println("Can't find " + searchKey);
+
+	      arr.display();                 // display items
+
+	      arr.delete(00);                // delete 3 items
+	      arr.delete(55);
+	      arr.delete(99);
+
+	      arr.display();                 // display items again
+	      
+	      //Creating the arrays
+	      OrderedArray srcArray1 = new OrderedArray(maxSize);   
+		  OrderedArray srcArray2 = new OrderedArray(maxSize);
+		  OrderedArray destinArray = new OrderedArray(maxSize);   
+
+		     
+		   //Filling the first array
+		     srcArray1.insert(12);
+		     srcArray1.insert(2);
+		     srcArray1.insert(34);
+		     srcArray1.insert(6);
+		     srcArray1.insert(60);
+		     srcArray1.insert(45);
+
+		  
+		   //Filling the second array
+		     srcArray2.insert(1);
+		     srcArray2.insert(19);
+		     srcArray2.insert(57);
+		     srcArray2.insert(88);
+		     srcArray2.insert(14);
+
+		   
+		      
+		    //Using the Merge Method
+		    //Displaying both arrays
+		    destinArray = srcArray1.merge(srcArray1, srcArray2);
+		    System.out.println("Both Array's: ");
+		    srcArray1.display();
+		    srcArray2.display();
+		      
+		   //Merging the arrays together
+		    System.out.println("*****Merge*****");
+		    destinArray.display(); 
+	      }
+}
