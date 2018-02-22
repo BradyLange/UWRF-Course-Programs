@@ -1,0 +1,67 @@
+/* 
+   Murfreesboro Regional Soccer League style sheet 
+   Filename: styles.css
+
+   Author: Brady Lange   
+   Date: 9/28/17     
+   HTML5 and CSS3 Illustrated Unit D, Independent Challenge 2
+ */
+ 
+ /*reset styles*/
+ article, aside, body, div, footer, header, h1, h2, p {
+	 border: 0;
+	 margin: 0;
+	 padding: 0;
+ }
+ 
+ /*body & page container*/
+ .container {
+	 max-width: 640px;
+	 margin: 0 auto;
+	 border: 3px solid black;
+ }
+
+ /*main content*/
+ article {
+	 width: 55%;
+	 float: right;
+	 padding: 3%;
+ }
+ 
+/* headings */
+header {
+   text-align: center;
+   color: white;
+   background-color: green;
+   padding: 0.5em;
+}
+
+/* sidebar */
+aside {
+   background-color: lightgreen;
+   width: 35%;
+   float: left;
+   padding: 2%;
+}
+aside h2 {
+	margin-bottom: 0.4em;
+}
+aside p{
+	margin-top: 0.4;
+	margin-bottom: 0.4;
+}
+
+aside p.description {
+	margin-left: 1em;
+}
+
+
+
+/* footer section */
+footer {
+   color: white;
+   background-color: black;
+   text-align: right;
+   clear: both;
+   padding: 0.5em;
+}
