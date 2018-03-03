@@ -39,7 +39,7 @@ hist(d_normal, freq = F, breaks = "scott", xlab = "log(Average charge)", ylab = 
 
 # 7.)
 # Using the curve function to overlay a density curve
-curve(dnorm(x, mean = mean(d_normal), sd = 1.17533347828), col = "firebrick", lwd = 3, add = T)
+curve(dnorm(x, mean = mean(d_normal), sd = sd(d_normal)), col = "firebrick", lwd = 3, add = T)
 
 # 8.)
 # Extracting data for providers wih IDs in the 10,000 to 19,999 range
