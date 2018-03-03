@@ -34,7 +34,8 @@ d_normal <- rnorm(d, mean = log(d))
 
 # 6.)
 # Plotting a probability density histogram of the data
-hist(d_normal, freq = F, breaks = "scott", xlab = "log(Average charge)", ylab = "Density", main = "Histogram of Average Charges of US Medical Providers")
+hist(d_normal, freq = F, breaks = "scott", xlab = "log(Average charge)", ylab = "Density", 
+     main = "Histogram of Average Charges of US Medical Providers")
 
 # 7.)
 # Using the curve function to overlay a density curve
@@ -46,7 +47,8 @@ id_range <- d[d[ , 1] >= 10000 & d[ , 1] <= 19999 , ]
 
 # 9.)
 # Using the data from 8 to create a scatterplot of AverageCharge for the providers
-plot(id_range, xlab = "Provider ID", ylab = "Average Charge ($)", main = "Average Procedure Charge by Provider", pch = 20)
+plot(id_range, xlab = "Provider ID", ylab = "Average Charge ($)", 
+     main = "Average Procedure Charge by Provider", pch = 20)
 
 # 10.)
 # Identifying the ProviderID with the most expensive average procedure costs
@@ -54,7 +56,8 @@ max_exp_prov <- id_range[id_range[ , 2] == max(id_range[ , 2]), 1]
 
 # 11.)
 # Creating a box plot of the most expensive provider
-max_exp_prov_boxp <- boxplot(id_range[id_range[ , 1] == 10139, 2], xlab = "Provider ID: 10139", ylab = "Average Procedure Cost", main = "Average Procedure Costs of the Most Expensive Provider")
+max_exp_prov_boxp <- boxplot(id_range[id_range[ , 1] == 10139, 2], xlab = "Provider ID: 10139", ylab = "Average Procedure Cost", 
+                             main = "Average Procedure Costs of the Most Expensive Provider")
 
 # 12.)
 # Outputting payment outliers in the boxplot
