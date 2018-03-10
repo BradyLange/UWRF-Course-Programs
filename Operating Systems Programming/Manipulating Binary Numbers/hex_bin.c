@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
  * Brady Lange
  * 3/6/18
  * File name: hex_fourBits.c
- * This program coverts hexidecimal to binary and binary to hexidecimal
+ * This program converts hexidecimal to binary and binary to hexidecimal
  */
 
 	// Start i at 2 because you don't count 0 and x for hexidecimal numbers
