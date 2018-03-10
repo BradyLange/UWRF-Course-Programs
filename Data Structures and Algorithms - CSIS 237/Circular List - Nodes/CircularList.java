@@ -53,19 +53,38 @@ public class CircularList {
 	{
 		if(isEmpty())
 			return null;
+		
+		//If the size is 1 first and last will deleted 
+		else if (listSize == 1)
+		{     Link temp = current;
+		      current = first = last = null;
+		      listSize = 0;
+		      return temp;
+		}   
+		
 		else
 		{
-			//Changing the first and last links if they are being deleted
-			if(current.next == first)
-				first = current;
-			if(current.next == last)
-				last = last.next;
-			Link deletedLink = current.next;
-			current.next = current.next.next;
-			//Decreasing the list size as a link was deleted
-			listSize--;
-			return deletedLink;
+                     //Changing the first and last links if they are being deleted
+                     if(current.next == first)
+                           first = current;
+                     if(current.next == last)
+                           last = last.next;
+                     Link deletedLink = current.next;
+                     current.next = current.next.next;
+                     //Decreasing the list size as a link was deleted
+                     listSize--;
+                     return deletedLink;
 		}
+		//Changing the first and last links if they are being deleted
+		if(current.next == first)
+			first = current;
+		if(current.next == last)
+			last = last.next;
+		Link deletedLink = current.next;
+		current.next = current.next.next;
+		//Decreasing the list size as a link was deleted
+		listSize--;
+		return deletedLink;
 	}
 	
 	//Delete method that deletes a link with a given key
@@ -148,24 +167,13 @@ public class CircularList {
 	//Displays the list method
 	public void displayList()
 	{
-		if(current == first)
-			//Use for loop to iterate through the list
-			for(int i = 0; i < listSize; i++)
-			{
-				//Print data
-				current.next.displayLink();
-				//Move the current to the next link
-				current = current.next; 
-			}
-		//Use for loop to iterate through the list
-		else
-			for(int i = 0; i < listSize; i++)
-			{
-				//Print data
-				current.displayLink();
-				//Move the current to the next link
-				current = current.next; 
-			}
+		for(int i = 0; i < listSize; i++)
+		{
+			//Print data
+			current.displayLink();
+			//Move the current to the next link
+			current = current.next; 
+		}
 	}
 
 	//Step method that moves from current link to the next
