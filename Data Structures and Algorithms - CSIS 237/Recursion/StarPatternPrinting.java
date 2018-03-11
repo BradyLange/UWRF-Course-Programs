@@ -13,20 +13,7 @@ public class StarPrinting
 {
 	//Being user friendly if they enter in a wrong input
 	Scanner console = new Scanner(System.in);
-	//Variables
-	private int counter; //Keeping track of the amount of stars that have been printed
-	private int totalStars; //Keeping track the max amount of stars to be printed
-	private boolean upperFlag; //Flag that controls what if statement that will be executed
-	
-	
-	//Constructor
-	public StarPrinting()
-	{
-		counter = 0;
-		totalStars = 0;
-		upperFlag = false;
-	}
-	
+
 	//Recursion method that prints stars in a pattern
 	public void printStarPattern(int input)
 	{
