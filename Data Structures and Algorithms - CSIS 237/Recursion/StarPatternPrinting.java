@@ -37,50 +37,25 @@ public class StarPrinting
 			input = console.nextInt();
 			if(input > 0)
 			{
+				console.close();
 				break;
 			}
 		}
 		
-		//Upper bound: 1 to size of input amount of stars
-		if(input == 0 || upperFlag == true)
-		{
-			for (int i = 0; i < input + 1; i++)
-			{
-				System.out.print("*");
-				++counter;
-			}
-			System.out.println();
-			//Base case to stop the method
-			if(counter == totalStars)
-				System.exit(0);
-			printStarPattern(input + 1);
-		}
-			
-		//Lower bound size of input to 1 star
-		else if(input != 0 && upperFlag == false)
-		{
-			for(int i = input; i > 0; i--)
-			{
-				System.out.print("*");
-				++counter;
-			}
-			System.out.println();
-			if(input == 1)
-			{
-				totalStars = counter * 2;
-				upperFlag = true;
-			}
-			printStarPattern(input - 1);
-		}
+		//Base case: if the input go to the next for loop
+		if(input == 0)
+			return;
 		
-		//If conditions aren't met an error will be thrown
-		else
-		{
-			System.out.println("There has been an error in printing your star pattern.");
-			System.exit(1);
-		}
-		
-		console.close();
+		//If the input is not equal to 0 print from the input down to 1
+		for(int i = 0; i < input; i++)
+			System.out.print("*");
+		System.out.println();
+		printStarPattern(input - 1);
+
+		//If the input is equal to zero this for loop will be executed
+		for(int i = 0; i < input; i++)
+			System.out.print("*");
+		System.out.println();
 	}
 	
 } //End of class
