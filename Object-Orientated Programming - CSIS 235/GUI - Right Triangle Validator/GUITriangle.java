@@ -14,7 +14,8 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 
-public class GUITriangle extends JFrame {
+public class GUITriangle extends JFrame 
+{
 	
 	//Instance variables
 	private static final int WIDTH = 500;
@@ -25,7 +26,8 @@ public class GUITriangle extends JFrame {
 	
 	
 	//Default constructor
-	public GUITriangle() {
+	public GUITriangle() 
+	{
 		
 		//Setting the title of the application
 		setTitle("Right Triangle Validator");
@@ -76,10 +78,12 @@ public class GUITriangle extends JFrame {
 	}
 	
 	//Check Button Handler
-	public class CheckButtonHandler implements ActionListener{
+	public class CheckButtonHandler implements ActionListener
+	{
 
 		@Override
-		public void actionPerformed(ActionEvent arg0) {
+		public void actionPerformed(ActionEvent arg0) 
+		{
 			double side1 = 0, side2 = 0, side3 = 0;
 			boolean check = false;
 			
@@ -89,7 +93,8 @@ public class GUITriangle extends JFrame {
 				try 
 				{ 
 					side1 = Double.parseDouble(sideOneTF.getText());
-					if(side1 <= 0) { 
+					if(side1 <= 0) 
+					{ 
 						sideOneTF.setBackground(Color.red);
 						throw new NegativeNumberException();
 					}
@@ -107,50 +112,56 @@ public class GUITriangle extends JFrame {
 				}
             	} while(!done1);
 
-				//Side 2
+			//Side 2
 		        boolean done2 = false;
-				do {
-				try {
-					side2 = Double.parseDouble(sideTwoTF.getText());
-					if(side2 <= 0) {
-						sideTwoTF.setBackground(Color.red);
-						throw new NegativeNumberException();
+				do 
+				{
+					try 
+					{
+						side2 = Double.parseDouble(sideTwoTF.getText());
+						if(side2 <= 0) 
+						{
+							sideTwoTF.setBackground(Color.red);
+							throw new NegativeNumberException();
+						}
+						sideTwoTF.setBackground(Color.green);
+						done2 = true;
 					}
-					sideTwoTF.setBackground(Color.green);
-					done2 = true;
-				}
-				catch (NegativeNumberException nne)
-				{
-					sideTwoTF.setText(JOptionPane.showInputDialog(nne.toString()));
-				}
-				catch (NumberFormatException e)
-				{
-					sideTwoTF.setBackground(Color.red);
-					sideTwoTF.setText(JOptionPane.showInputDialog("Invalid input: Must be a numeric value and cannot be null. Enter side two."));
-				}
+					catch (NegativeNumberException nne)
+					{
+						sideTwoTF.setText(JOptionPane.showInputDialog(nne.toString()));
+					}
+					catch (NumberFormatException e)
+					{
+						sideTwoTF.setBackground(Color.red);
+						sideTwoTF.setText(JOptionPane.showInputDialog("Invalid input: Must be a numeric value and cannot be null. Enter side two."));
+					}
 				} while (!done2);
 
 				//Side 3
 				boolean done3 = false;
-				do {
-				try {
-					side3 = Double.parseDouble(sideThreeTF.getText());
-					if(side3 <= 0) { 
-						sideThreeTF.setBackground(Color.red);
-						throw new NegativeNumberException();
+				do 
+				{
+					try 
+					{
+						side3 = Double.parseDouble(sideThreeTF.getText());
+						if(side3 <= 0) 
+						{ 
+							sideThreeTF.setBackground(Color.red);
+							throw new NegativeNumberException();
+						}
+						sideThreeTF.setBackground(Color.green);
+						done3 = true;
 					}
-					sideThreeTF.setBackground(Color.green);
-					done3 = true;
-				}
-				catch (NegativeNumberException nne)
-				{
-					sideThreeTF.setText(JOptionPane.showInputDialog(nne.toString()));
-				}
-				catch (NumberFormatException e)
-				{
-					sideThreeTF.setBackground(Color.red);
-	            	sideThreeTF.setText(JOptionPane.showInputDialog("Invalid input: Must be a numeric value and cannot be null. Enter side three."));
-				}
+					catch (NegativeNumberException nne)
+					{
+						sideThreeTF.setText(JOptionPane.showInputDialog(nne.toString()));
+					}
+					catch (NumberFormatException e)
+					{
+						sideThreeTF.setBackground(Color.red);
+						sideThreeTF.setText(JOptionPane.showInputDialog("Invalid input: Must be a numeric value and cannot be null. Enter side three."));
+					}
 				} while(!done3);
 					
 				//Making the sides squared
@@ -161,12 +172,14 @@ public class GUITriangle extends JFrame {
 				//Checking if the sides possess right triangle traits
 					if((side1 + side2) == side3 || 
 					   (side3 + side2) == side1 ||
-					   (side3 + side1) == side2) {
+					   (side3 + side1) == side2) 
+					{
 						resultTF.setFont(new Font("Times New Roman", Font.BOLD, 40));
 						resultTF.setBackground(Color.green);
 						check = true;
 					}
-					else { 
+					else 
+					{ 
 						resultTF.setFont(new Font("Slab Serifs", Font.BOLD, 50));
 						resultTF.setBackground(Color.red);
 						check = false;
@@ -181,30 +194,22 @@ public class GUITriangle extends JFrame {
 	}
 	
 	//Exit Button Handler
-	public class ExitButtonHandler implements ActionListener{
+	public class ExitButtonHandler implements ActionListener
+	{
 
 		@Override
-		public void actionPerformed(ActionEvent arg0) {
+		public void actionPerformed(ActionEvent arg0) 
+		{
 
 			System.exit(0);
 		}
 		
 	}
 	
-	public void paint(Graphics g) {
-		super.paint(g);
-		
-		//if(checkB.)
-			g.setColor(Color.red);
-			g.drawString("hello", 10, 5);
-		
-		
-	}
-	
-	public static void main(String[] args){
+	public static void main(String[] args)
+	{
 		
 		GUITriangle tri = new GUITriangle();
-		
 		
 	}
 
