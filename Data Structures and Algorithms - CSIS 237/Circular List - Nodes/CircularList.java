@@ -23,6 +23,8 @@ public class CircularList {
 	{
 		listSize = 0;
 		current = null;
+		first = null;
+		last = null;
 	}
 	
 	//Insert method that inserts after the current link
