@@ -1,6 +1,5 @@
 # Brady Lange
-# w3110657
-# CSIS 239
+# Course: CSIS 239
 # R Script 2
 # 3/3/18
 # This program explores data from a file that contains provider ids and their average procedure cost 
