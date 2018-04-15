@@ -1,0 +1,34 @@
+	
+Assignment 1
+Individual Feedback:
+  calc.sh, 1 (logic error when checking if params are numbers)
+  password_check.sh, 1 (numerous errors)
+  primes.sh, 1 (syntax errors)
+  users.sh, 1 (syntax errors)
+  organize_files.sh, 0
+
+	
+Assignment 2
+Individual Feedback:
+   Problem 1: 2
+   Problem 2: 1 (did not print result)
+   Problem 3: 1 (incomplete)
+   Problem 4: 1 (logic error)
+   Problem 5: 1 (did not compile)
+
+	
+Assignment 3
+Individual Feedback:
+  Program 1: 2 
+  Program 2: 2
+  Program 3: 1 (Converted -4506 to -25494)
+  Program 4: 2
+  Program 5: 2
+
+
+Assignment 4
+
+
+
+
+Assignment 5
