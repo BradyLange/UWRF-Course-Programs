@@ -1,0 +1,57 @@
+	
+Assignment 2 - Exploratory data analysis (EDA)
+Individual Feedback:
+#5 -1.5 Incorrect conversion of data to normal dist
+d2 <- d
+d2[,2] <- log(d[,2])
+rnorm generates random data that is normally distributed. So using rnorm you throw away your data.
+#12 -0.5 Incorrect outlier identification
+bp_obj$out
+	
+Assignment3 - Linear regression
+Individual Feedback:
+#6 -1 missing interpretation
+# yes, it supports the hypothesis, p < 0.05
+I'd say that 0.0000000000000000000000541375 is < 0.05.
+The e-18 means there 18 zeros after the decimal place.
+#8 -0.75 incorrect model. murder was not to be included.
+mod <- lm(d$crime ~ d$pctmetro + d$poverty + d$pcths + d$single)
+#10 
+# All have positive slopes. As metro, poverty, or single go up, crime goes up.
+# You can get the slopes by looking at the predictor's beta values in the regression summary.
+	
+Assignment 4 - k-Nearest Neighbors
+Individual Feedback:
+You didn't initialize optimalK first.
+# 10 -4 incorrect cross-validation
+cv_runs = 1000
+# Holds 1000 splits, 20-kval runs of kNN
+mc_rate <- matrix(numeric(cv_runs*k_runs), nrow = cv_runs)
+# Split data 1000 times. For each split, test 20 vals of k. 1000x20 runs total.
+for (cval in 1:cv_runs) {
+  # Split data (same as above)
+  train_idx <- sample(1:data_size, num_train, replace=FALSE)
+  train_data <- d[train_idx, 1:4]
+  train_labels <- d$Species[train_idx]
+  test_idx <- setdiff(1:data_size, train_idx)
+  test_data <- d[test_idx, 1:4]
+  test_true_labels <- d$Species[test_idx]
+  # Test 20 values of k
+  for (kval in 1:k_runs) {
+    test_predicted_labels <- knn(train_data, test_data, train_labels, k = kval)
+    mc_rate[cval, kval] <- sum(test_predicted_labels != test_true_labels) / num_test
+  }
+}
+	
+Assignment 5 - k-Means
+Individual Feedback:
+#1 -0.5 incorrect file
+d <- read.csv("http://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data", header = F)
+#6 -2 incorrect scaling of data.  You only scaled the first two columns of data ...
+d2 <- scale(d)
+#8 -2 incorrect comparison with table()
+results2 <- kmeans(d2, centers = 5, nstart = 1)
+table(results$cluster,results2$cluster)
+It's difficult to tell the right number of clusters from this plot, but that's because the data are unscaled.  The correct answer is 3.  
+There were also three 
+# cultivars in the original data (first column dropped).
