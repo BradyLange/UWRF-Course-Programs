@@ -27,8 +27,19 @@ Individual Feedback:
 
 
 Assignment 4
+Individual Feedback:
+w3110657_assignment_4
+Problem 1: 2
+Problem 2: 0   (code matches another student's code)
+Problem 3: 1 (only created 1 file when splitting a 528 byte file into 100 bytes)
+Program 4: 2
+Problem 5: 2
 
-
-
-
+	
 Assignment 5
+Individual Feedback:
+Problem 1: 2 (Should run commands from any path in PATH. i.e. do not hardcode /bin directory. A process has environment variables.)
+Problem 2: 1 (no return in arraymalloc)
+Problem 3: 1 (client closes after getting input from user)
+Problem 4: 2 
+Problem 5: 1 (mtserver does not compile)
